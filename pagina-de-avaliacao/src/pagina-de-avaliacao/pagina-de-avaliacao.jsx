@@ -8,7 +8,7 @@ import {
   FaEdit,
   FaTrash,
 } from "react-icons/fa";
-import "./App.css";
+import "./style.css";
 const PRODUTO_ESTATICO = {
   id: "produto-xyz-123", // ID estático para o localStorage
   nome: "Smartphone Ultra X",
@@ -440,7 +440,7 @@ const CadastroUsuario = React.memo(({ onCadastrar }) => {
 
 /* ------------------ Componente Principal ------------------ */
 
-function App() {
+function PaginadeAvaliacao() {
   const id = PRODUTO_ESTATICO.id; // ID fixo para localStorage
 
   const { usuario, cadastrar, } = useUsuario();
@@ -722,4 +722,4 @@ function App() {
     </div>
   );
 }
-export default App;
+export default PaginadeAvaliacao;
