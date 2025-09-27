@@ -1,0 +1,221 @@
+/* Este CSS utiliza as variáveis de cor de madeira e natureza */
+
+:root {
+  /* CORES - Tons de Madeira Escura e Natureza */
+  --cor-primaria: #281a1a; /* Fundo Principal */
+  --cor-secundaria: #4c3b2f; /* Containers/Caixas de Login */
+  --cor-barra-pesquisa: #6f5844; /* Campos de Input */
+  --cor-hover: #a0522d; /* Efeito de Foco/Hover */
+  
+  /* CORES DE FONTE E DESTAQUE */
+  --cor-primaria-fonte: #f5e6cf; /* Texto Principal (Creme) */
+  --cor-secundaria-fonte: #c6a78d; /* Texto Secundário */
+  --cor-terciaria-fonte: #6b8e23; /* Destaques/Ações (Verde Oliva Escuro) */
+
+  /* FONTES */
+  --fonte-primaria: "Inter", sans-serif;
+}
+
+/* 1. Estilização Geral do Corpo (Aplicada no main.jsx) */
+body {
+  margin: 0;
+  background-color: var(--cor-primaria);
+  color: var(--cor-primaria-fonte);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: var(--fonte-primaria);
+}
+
+/* 2. Container e Formulário */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.login-form {
+  background-color: var(--cor-secundaria); 
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  
+  /* === AQUI ESTÁ A ANIMAÇÃO === */
+  animation: fadeIn 0.8s ease-out; 
+}
+
+.login-title {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--cor-primaria-fonte);
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.login-subtitle {
+  color: var(--cor-secundaria-fonte);
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+/* 3. Estilização dos Inputs e Rótulos com Ícones */
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-label-with-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: var(--cor-primaria-fonte);
+    font-weight: 500;
+}
+
+.input-label-with-icon .icon {
+    margin-right: 8px;
+    color: var(--cor-secundaria-fonte);
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: var(--cor-barra-pesquisa); 
+  border: 1px solid var(--cor-hover);
+  color: var(--cor-primaria-fonte);
+  font-size: 1em;
+  transition: border-color 0.3s;
+}
+
+.input-group input::placeholder {
+    color: var(--cor-secundaria-fonte);
+}
+
+.input-group input:focus {
+  border-color: var(--cor-terciaria-fonte);
+  box-shadow: 0 0 5px var(--cor-terciaria-fonte);
+}
+
+/* 4. Senha e Toggle (Mostrar/Esconder) */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    padding-right: 50px; /* Espaço para o ícone do toggle */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    color: var(--cor-secundaria-fonte);
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.toggle-password:hover {
+    color: var(--cor-hover);
+}
+
+/* 5. Botões e Links */
+.login-button {
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 6px;
+  background-color: var(--cor-terciaria-fonte); 
+  color: var(--cor-primaria);
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: var(--cor-hover);
+  color: var(--cor-primaria-fonte);
+}
+
+.support-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+.support-links a {
+    color: var(--cor-secundaria-fonte);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.support-links a:hover {
+    color: var(--cor-hover);
+}
+
+.support-links span {
+    color: var(--cor-secundaria-fonte);
+}
+
+.error-message {
+    color: #ff6347;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+/* 6. Login Social */
+.social-divider {
+    text-align: center;
+    margin: 20px 0 15px 0;
+    color: var(--cor-secundaria-fonte);
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: var(--cor-primaria-fonte);
+    color: var(--cor-primaria);
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.social-button:hover {
+    opacity: 0.9; 
+}
+
+/* 7. DEFINIÇÃO DA ANIMAÇÃO */
+/* A animação começa com opacidade 0 (invisível) e termina em 1 (totalmente visível) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    /* Adiciona um pequeno movimento para cima para dar um efeito mais suave */
+    transform: translateY(20px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

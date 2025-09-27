@@ -6,15 +6,20 @@ body {
 }
 
 :root {
-  --cor-primaria: #2b1b1b; /* fundo escuro avermelhado */
-  --cor-secundaria: #3c2f2f; /* tom mais suave, vinho escuro */
-  --cor-barra-pesquisa: #8b3a3a; /* vermelho queimado */
+  /* CORES - Tons de Madeira Escura e Natureza */
+  --cor-primaria: #281a1a; /* Marrom muito escuro, quase preto - Fundo Principal */
+  --cor-secundaria: #4c3b2f; /* Marrom-café escuro - Cor de Superfícies/Containers */
+  --cor-barra-pesquisa: #6f5844; /* Marrom médio amadeirado - Campos de Input */
+  --cor-hover: #a0522d; /* Marrom Sela (Sienna) - Efeito de Foco/Hover */
+  
+  /* CORES DE FONTE E DESTAQUE */
+  --cor-primaria-fonte: #f5e6cf; /* Creme/Bege Claro - Texto Principal (Alto Contraste) */
+  --cor-secundaria-fonte: #c6a78d; /* Cobre/Bronze claro - Texto Secundário ou Placeholder */
+  --cor-terciaria-fonte: #6b8e23; /* Verde Oliva Escuro - Destaques ou Botões de Ação */
+
+  /* FONTES (Mantidas como no seu original) */
   --fonte-primaria: "Inter";
   --fonte-secundaria: "Poppins";
-  --cor-hover: #d35400; /* laranja queimado */
-  --cor-primaria-fonte: #f5e6e0; /* bege claro para contraste */
-  --cor-secundaria-fonte: #e2b7a0; /* tom pêssego/avelã */
-  --cor-terciaria-fonte: #a97474; /* vermelho terroso mais suave */
 }
 
 * {
